@@ -93,7 +93,9 @@ class HtmlElement {
                 }
             }
             if (!empty($id)) {
-                $current_id = trim($attributes['id']);
+                if(!empty($attributes['id'])){
+                    $current_id = trim($attributes['id']);
+                }
                 if (empty($attributes['id'])) {
                     $attributes['id'] = $id;
                 } else {
